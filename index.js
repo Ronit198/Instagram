@@ -15,6 +15,7 @@ getdata()
 
 const appand= (data) =>{
     let div = document.getElementById("pic")
+    div.innerHTML = null
     data.forEach(function(el){
         let img_div = document.createElement("div")
 
