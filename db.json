@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": "3",
+      "caption": "Lord",
+      "image_url": "https://i.ibb.co/nC92Gks/Whats-App-Image-2022-11-03-at-1-58-48-PM.jpg"
+    },
+    {
+      "id": "4",
+      "caption": "Mountain",
+      "image_url": "https://i.ibb.co/dDN5hyr/mountain.webp"
+    },
+    {
+      "id": "1",
+      "caption": "Goat",
+      "image_url": "https://i.ibb.co/MP184bx/messi.webp"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
