@@ -62,6 +62,51 @@ const createPost =async () =>{
     }) 
     let data = await res.json()
     console.log(data)
-    
-
 }
+
+const delete_btn = document.getElementById("delete")
+
+
+// delete post
+delete_btn.onclick = function(){
+    deletePost()
+}
+
+const deletePost = async () => {
+    let delete_id = document.getElementById("delete_id").value;
+
+    let res = await fetch(`http://localhost:3000/posts/${delete_id}`,{
+    method:'DELETE',
+    headers:{
+        'Content-Type':'application/json'
+    }
+    })
+
+    let data = await res.json()
+}
+
+// Caption Update Function
+let update_caption = document.getElementById("change_caption")
+
+update_caption.onclick = function(){
+    updatePost()
+}
+
+const updatePost =async () =>{
+    let update_id = document.getElementById("update_id").value;
+    let newCaption = document.getElementById("Update_caption").value;
+
+    let sending_data = {
+        caption:newCaption
+    };
+    let res = await fetch(`http://localhost:3000/posts/${update_id}`,{
+        method:'PUT',
+        body:JSON.stringify(sending_data),
+        headers:{
+            'Content-Type':'application/json'
+        }
+    });
+    let data = await res.json()
+    console.log(data)
+}
+
